@@ -1,16 +1,25 @@
-# state_flutter
+# Flutter To-Do App 
 
-A new Flutter project.
+## Deskripsi
+Aplikasi Flutter sederhana untuk mengelola To-Do list dengan dua layar:
+- **HomePage**: tambah, centang, hapus 
+- **SummaryPage**: ringkasan total & selesai
 
-## Getting Started
+## Diagram Widget Tree
+MaterialApp
+ └── HomePage
+      ├── AppBar → SummaryPage
+      ├── Row (TextField + Button)
+      └── ListView (TodoItem)
+ └── SummaryPage
+      └── Column (Text Total & Completed)
 
-This project is a starting point for a Flutter application.
+## State Management
+Provider (ChangeNotifier) dipilih karena:
+- Rekomendasi Flutter Docs untuk pemula
+- Memisahkan state dan UI
+- Perubahan data otomatis update UI
 
-A few resources to get you started if this is your first Flutter project:
+## screenshot 
+https://drive.google.com/drive/folders/14IXb1pL5WAwzUfYa7eCGJnY9bB2IjsvT?usp=drive_link
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
